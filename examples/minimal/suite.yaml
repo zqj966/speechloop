@@ -1,0 +1,13 @@
+suite: minimal
+defaults:
+  asr: dummy
+  llm: echo
+  tts: tone
+cases:
+  - name: hello
+    audio: ./hello.wav
+    expected_transcript: hello
+    expected_response_contains: ["hello"]
+    tags: [smoke]
+thresholds:
+  wer_max: 0.5
