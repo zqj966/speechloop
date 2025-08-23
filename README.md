@@ -64,7 +64,7 @@ thresholds:
   latency_p95_ms: 1500
 ```
 
-
+## 内置适配器
 
 | 名称        | 类型 | 说明                                   |
 |-------------|------|----------------------------------------|
@@ -80,4 +80,54 @@ thresholds:
 
 接入自家模型只需实现协议中的几个方法，详见 [docs/adapters.md](docs/adapters.md)。
 
+## 命令行
 
+```text
+speechloop init <dir>           生成最小可跑套件
+speechloop run <suite.yaml>     执行套件
+speechloop report <result.json> 重新渲染报告
+```
+
+常用参数：`--format {json,text,html,md}`、`--filter <tag>`、`--workers <N>`、
+`--timeout <sec>`、`--dry-run`、`--artifacts-dir <path>`。
+
+## 报告样例
+
+JSON：
+
+```json
+{
+  "schema": 1,
+  "suite": "demo",
+  "summary": {"total": 12, "passed": 11, "failed": 1, "wer": 0.07},
+  "cases": [...]
+}
+```
+
+HTML 报告内置 per-case diff、扰动矩阵热力图、p50/p95/p99 折线，详见
+[docs/usage.md](docs/usage.md#html-报告)。
+
+## 设计要点
+
+- 适配器 = 协议 + 注册表，业务依赖装进 extras，核心包零依赖（除 PyYAML）
+- 扰动 / 重试 / 超时统一在 `runner` 层处理，适配器不需要关心
+- 指标是纯函数，输入是 `CaseResult`，方便单测
+- 报告器只读 `SuiteResult`，互不依赖
+
+更多见 [docs/architecture.md](docs/architecture.md) 与 [docs/design-notes.md](docs/design-notes.md)。
+
+## 开发
+
+```bash
+make install
+make lint
+make test
+```
+
+## 贡献
+
+欢迎 issue / PR，详见 [CONTRIBUTING.md](CONTRIBUTING.md)。
+
+## License
+
+MIT
