@@ -1,5 +1,23 @@
 # Changelog
 
+所有显著变更都会记录在这里。本项目遵循 [Semantic Versioning](https://semver.org/lang/zh-CN/)。
+
+## [0.3.0] - 2026-06
+
+### Added
+- Markdown reporter
+- 扰动矩阵展开 + 可复现 seed
+- 每用例 artifact 输出目录
+- HTTP-based 适配器（ASR/LLM/TTS）
+
+### Changed
+- `SilentTTS` 重命名为 `QuietTTS`（注册名仍为 `quiet`）
+- HTML reporter 增加 per-case diff 视图
+
+### Fixed
+- 空 WAV 不再抛出 IndexError
+- HTML 报告中转写文本现在会被转义
+
 ## [0.2.0] - 2026-05
 
 ### Added
