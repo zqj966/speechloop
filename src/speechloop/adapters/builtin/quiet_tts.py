@@ -1,4 +1,4 @@
-"""SilentTTS — emit a same-length silence WAV (will rename to QuietTTS)."""
+"""文本 → 同时长静音 WAV。"""
 from __future__ import annotations
 
 from ...audio import silence, write_wav
@@ -6,7 +6,9 @@ from ..base import register
 
 
 @register("TTS", "quiet")
-class SilentTTS:
+class QuietTTS:
+    """每个字符产出 ``chars_per_sec`` 分之一秒静音。"""
+
     def __init__(self, sample_rate: int = 16000, chars_per_sec: float = 5.0):
         self.sample_rate = sample_rate
         self.chars_per_sec = chars_per_sec
