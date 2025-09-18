@@ -7,3 +7,5 @@ ignore = ["E501"]
 
 [lint.per-file-ignores]
 "tests/*" = ["B011"]
+
+# ruff config kept intentionally small
