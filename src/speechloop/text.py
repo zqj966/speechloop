@@ -44,3 +44,5 @@ def tokenize_zh(text: str) -> list[str]:
 
 def tokenize_en(text: str) -> list[str]:
     return normalize(text).split()
+
+# CR/LF already collapsed in normalize()
