@@ -7,6 +7,7 @@ from .base import Reporter
 
 
 _CSS = """
+/* HTML output goes through html.escape; CSS stays minimal */
 body{font-family:-apple-system,Helvetica,Arial,sans-serif;margin:24px;color:#222}
 h1{margin-top:0}
 .sum{padding:12px;background:#f5f5f7;border-radius:6px;margin:12px 0}
