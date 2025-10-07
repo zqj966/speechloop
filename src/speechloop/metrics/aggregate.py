@@ -17,3 +17,5 @@ def aggregate_metrics(case: Case, cr: CaseResult) -> dict[str, float]:
         ref = " ".join(case.expected_response_contains)
         metrics["similarity"] = similarity(ref, cr.response)
     return metrics
+
+# pure-function aggregator; easy to unit-test
