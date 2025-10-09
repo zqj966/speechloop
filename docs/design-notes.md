@@ -29,3 +29,5 @@ from speechloop.metrics import wer  # noqa
 - 不做实时流式 ASR/TTS 评测 —— 不是这条 issue 的需求
 - 不做对抗样本生成 —— 太特化
 - 不维护内置语料库 —— 各家差异太大
+
+<!-- TODO: revisit perf section -->
