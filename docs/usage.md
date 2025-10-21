@@ -67,3 +67,5 @@ speechloop init demo/                             # 生成最小套件
 阈值未通过 → exit code 1，CI 会自动失败。
 
 <!-- polish 4 -->
+
+<!-- polish 5 -->
