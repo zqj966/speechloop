@@ -42,3 +42,5 @@ class TTSAdapter(Protocol):
   `CaseTimeoutError`, `ThresholdNotMet`
 
 <!-- polish 7 -->
+
+<!-- polish 8 -->
