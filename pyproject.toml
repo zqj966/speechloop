@@ -4,10 +4,49 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "speechloop"
-version = "0.0.1"
-description = "speech LLM full-pipeline test framework"
+version = "0.1.0"
+description = "语音大模型全链路测试框架 — ASR/LLM/TTS pipeline test harness"
+readme = "README.md"
+license = { text = "MIT" }
 requires-python = ">=3.10"
-dependencies = ["pyyaml>=6.0"]
+authors = [{ name = "Lost" }]
+keywords = ["speech", "asr", "tts", "llm", "evaluation", "testing"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Testing",
+    "Topic :: Multimedia :: Sound/Audio :: Speech",
+]
+dependencies = [
+    "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7",
+    "pytest-cov>=4",
+    "ruff>=0.4",
+    "mypy>=1.8",
+    "pre-commit>=3",
+]
+http = ["httpx>=0.27"]
+
+[project.scripts]
+speechloop = "speechloop.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/zqj966/speechloop"
+Issues = "https://github.com/zqj966/speechloop/issues"
+Changelog = "https://github.com/zqj966/speechloop/blob/main/CHANGELOG.md"
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra --strict-markers"
