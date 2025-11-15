@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "speechloop"
-version = "0.2.0"
+version = "0.3.0"
 description = "语音大模型全链路测试框架 — ASR/LLM/TTS pipeline test harness"
 readme = "README.md"
 license = { text = "MIT" }
