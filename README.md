@@ -7,7 +7,7 @@
 [![python](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org)
 [![license](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
-`speechloop` 把 ASR、LLM、TTS 三段拼成一条可重放、可断言、可对比的的链路，
+`speechloop` 把 ASR、LLM、TTS 三段拼成一条可重放、可断言、可对比的链路，
 用 YAML 描述测试套件，用一行 `speechloop run` 跑完，得到结构化的 JSON / HTML 报告。
 
 它解决的问题：
@@ -131,9 +131,3 @@ make test
 ## License
 
 MIT
-
-<!-- polish 1 -->
-
-<!-- polish 2 -->
-
-<!-- polish 3 -->
