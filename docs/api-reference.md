@@ -40,7 +40,3 @@ class TTSAdapter(Protocol):
 - `SpeechloopError` (基类)
 - `SuiteLoadError`, `AdapterError`, `TransientError`,
   `CaseTimeoutError`, `ThresholdNotMet`
-
-<!-- polish 7 -->
-
-<!-- polish 8 -->
