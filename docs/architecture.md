@@ -36,9 +36,3 @@ audio.wav ─▶│  ASR     │─▶  │  LLM     │─▶  │  TTS     │
 
 - 真实声学模型 —— 用 `http` 适配器接外部服务
 - 评分模型 —— `similarity` 故意做成 Jaccard，需要更准的请自行注册新指标
-
-# noted
-
-<!-- polish 11 -->
-
-<!-- polish 12 -->
