@@ -1,6 +1,8 @@
 """适配器协议 + 全局注册表 + entry-point 发现。"""
 from __future__ import annotations
-from typing import Any, Callable, Protocol, runtime_checkable
+
+from collections.abc import Callable
+from typing import Any, Protocol, runtime_checkable
 
 # (kind, name) -> factory
 _REGISTRY: dict[tuple[str, str], Callable[..., Any]] = {}
