@@ -1,7 +1,8 @@
 """正则规则驱动的离线 LLM，用于回归测试链路。"""
 from __future__ import annotations
+
 import re
-from typing import Iterable
+from collections.abc import Iterable
 
 from ..base import register
 
