@@ -3,8 +3,10 @@
 为了让核心包零外部依赖（除 PyYAML），HTTP 客户端是注入式的。
 """
 from __future__ import annotations
+
+from collections.abc import Callable
 from pathlib import Path
-from typing import Any, Callable
+from typing import Any
 
 from .base import register
 

@@ -1,7 +1,9 @@
 """通用 HTTP TTS 适配器。"""
 from __future__ import annotations
+
+from collections.abc import Callable
 from pathlib import Path
-from typing import Any, Callable
+from typing import Any
 
 from .base import register
 
