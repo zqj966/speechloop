@@ -1,5 +1,6 @@
 """极简 WAV I/O 与扰动原语 —— 只依赖标准库 ``wave``。"""
 from __future__ import annotations
+
 import array
 import math
 import random
