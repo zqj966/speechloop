@@ -1,5 +1,6 @@
 """测试用例数据类。"""
 from __future__ import annotations
+
 from dataclasses import dataclass, field
 from pathlib import Path
 
@@ -14,7 +15,7 @@ class Case:
     timeout_s: float | None = None
     perturbation_id: str | None = None
 
-    def resolve(self, base: Path) -> "Case":
+    def resolve(self, base: Path) -> Case:
         """把 audio 解析为相对 ``base`` 的绝对路径。"""
         p = Path(str(self.audio)).expanduser()
         if not p.is_absolute():
