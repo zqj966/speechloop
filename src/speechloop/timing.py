@@ -1,5 +1,6 @@
 """高精度计时器。"""
 from __future__ import annotations
+
 import time
 from contextlib import contextmanager
 from dataclasses import dataclass
