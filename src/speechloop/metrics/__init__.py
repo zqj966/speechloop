@@ -1,11 +1,11 @@
 """指标实现集合。"""
-from .wer import wer
+from .aggregate import aggregate_metrics
 from .cer import cer
-from .similarity import similarity
 from .latency import latency_percentiles
 from .rtf import rtf
+from .similarity import similarity
 from .thresholds import evaluate_thresholds
-from .aggregate import aggregate_metrics
+from .wer import wer
 
 __all__ = [
     "wer", "cer", "similarity",
