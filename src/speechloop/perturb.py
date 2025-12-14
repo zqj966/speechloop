@@ -1,9 +1,10 @@
 """音频扰动矩阵 + 可复现 RNG。"""
 from __future__ import annotations
+
 import itertools
 import random
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Iterable
 
 from .audio import Audio, add_noise, gain, resample_linear
 
@@ -49,7 +50,7 @@ def expand_matrix(specs: Iterable[dict]) -> list[Perturbation]:
             continue
         keys = [k for k, _ in lists]
         for values in itertools.product(*(vs for _, vs in lists)):
-            params = dict(zip(keys, values))
+            params = dict(zip(keys, values, strict=False))
             ident = f"{kind}[{','.join(f'{k}={v}' for k, v in params.items())}]"
             out.append(Perturbation(kind=kind, params=params, id=ident))
     return out
