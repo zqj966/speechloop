@@ -1,13 +1,13 @@
 """报告渲染器分发表。"""
 from __future__ import annotations
-from typing import Callable
+
+from collections.abc import Callable
 
 from ..result import SuiteResult
 from .html_reporter import HTMLReporter
 from .json_reporter import JSONReporter
 from .md_reporter import MarkdownReporter
 from .text_reporter import TextReporter
-
 
 _REGISTRY: dict[str, Callable[[SuiteResult], str]] = {
     "text": lambda sr: TextReporter().render(sr),

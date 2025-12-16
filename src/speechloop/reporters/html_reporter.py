@@ -1,10 +1,10 @@
 """HTML reporter —— 自包含的单文件输出。"""
 from __future__ import annotations
+
 import html
 
 from ..result import SuiteResult
 from .base import Reporter
-
 
 _CSS = """
 /* HTML output goes through html.escape; CSS stays minimal */
