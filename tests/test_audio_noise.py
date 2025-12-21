@@ -5,7 +5,7 @@ def test_noise_changes_samples_but_keeps_length():
     a = sine(0.2, 440.0)
     b = add_noise(a, snr_db=10.0, seed=42)
     assert len(a.samples) == len(b.samples)
-    diffs = sum(1 for x, y in zip(a.samples, b.samples) if x != y)
+    diffs = sum(1 for x, y in zip(a.samples, b.samples, strict=False) if x != y)
     assert diffs > len(a.samples) // 2
 
 
