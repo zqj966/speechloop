@@ -1,5 +1,5 @@
 from speechloop.adapters import get_adapter
-from speechloop.audio import sine, silence, write_wav
+from speechloop.audio import silence, sine, write_wav
 
 
 def test_energy_detects_tone(tmp_path):
