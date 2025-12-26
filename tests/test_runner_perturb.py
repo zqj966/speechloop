@@ -1,7 +1,7 @@
-from speechloop.suite import Suite
 from speechloop.case import Case
-from speechloop.runner import run_suite
 from speechloop.perturb import Perturbation
+from speechloop.runner import run_suite
+from speechloop.suite import Suite
 
 
 def test_perturb_matrix(tone_wav):

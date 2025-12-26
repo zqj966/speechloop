@@ -1,10 +1,9 @@
 import time
-import pytest
 
 from speechloop.adapters import register
-from speechloop.suite import Suite
 from speechloop.case import Case
 from speechloop.runner import run_suite
+from speechloop.suite import Suite
 
 
 @register("LLM", "slow-test")

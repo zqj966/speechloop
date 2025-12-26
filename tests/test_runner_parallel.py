@@ -1,6 +1,6 @@
-from speechloop.suite import Suite
 from speechloop.case import Case
 from speechloop.runner import run_suite
+from speechloop.suite import Suite
 
 
 def test_runner_parallel(tone_wav):
