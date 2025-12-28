@@ -1,6 +1,7 @@
-from speechloop.suite import Suite
-from speechloop.case import Case
 from pathlib import Path
+
+from speechloop.case import Case
+from speechloop.suite import Suite
 
 
 def test_include_exclude():
