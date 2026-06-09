@@ -1,5 +1,6 @@
 """YAML 套件加载与展开。"""
 from __future__ import annotations
+
 import glob
 from dataclasses import dataclass, field
 from pathlib import Path

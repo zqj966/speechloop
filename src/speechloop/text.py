@@ -1,5 +1,6 @@
 """文本归一化与简易分词。"""
 from __future__ import annotations
+
 import re
 import unicodedata
 
