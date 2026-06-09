@@ -49,7 +49,7 @@ speechloop report result.json --format md         # 把 JSON 转 Markdown
 speechloop init demo/                             # 生成最小套件
 ```
 
-## 4. HTML 报告
+## 4. HTML 报告 (浏览器自包含)
 
 报告包含：
 
