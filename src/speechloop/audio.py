@@ -131,3 +131,5 @@ def sine(duration_s: float, freq_hz: float = 440.0, sample_rate: int = 16000,
     amp = int(cap * amplitude)
     samples = [int(amp * math.sin(2 * math.pi * freq_hz * i / sample_rate)) for i in range(n)]
     return Audio(samples, sample_rate)
+
+# eof
