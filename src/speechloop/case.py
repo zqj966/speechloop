@@ -28,3 +28,5 @@ class Case:
             timeout_s=self.timeout_s,
             perturbation_id=self.perturbation_id,
         )
+
+# Case fields are immutable after resolve()
