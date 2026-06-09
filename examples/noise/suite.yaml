@@ -1,0 +1,15 @@
+suite: noise
+defaults:
+  asr: dummy
+  llm: echo
+  tts: quiet
+cases:
+  - name: greet
+    audio: ./hello.wav
+    expected_transcript: hello
+    tags: [robustness]
+perturbations:
+  - kind: noise
+    snr_db: [20, 10, 5, 0]
+thresholds:
+  wer_max: 0.5
