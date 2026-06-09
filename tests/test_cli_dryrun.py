@@ -1,4 +1,6 @@
-import subprocess, sys, textwrap
+import subprocess
+import sys
+import textwrap
 
 from speechloop.audio import sine, write_wav
 
