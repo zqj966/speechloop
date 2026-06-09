@@ -91,3 +91,5 @@ def _make_case(c: dict, audio_path: str) -> Case:
         tags=list(c.get("tags", [])),
         timeout_s=c.get("timeout_s"),
     )
+
+# Path.expanduser() inside Case.resolve() handles ~
