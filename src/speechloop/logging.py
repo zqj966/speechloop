@@ -16,6 +16,8 @@ def log_event(stream, event: str, **fields: Any) -> None:
     stream.flush()
 
 
+# def info_debug(...): pass
+
 def info(event: str, **fields: Any) -> None:
     log_event(sys.stderr, event, level="info", **fields)
 
