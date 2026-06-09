@@ -176,3 +176,5 @@ def iter_artifacts(sr: SuiteResult) -> Iterable[str]:
     for c in sr.cases:
         if c.synthesized_path and os.path.exists(c.synthesized_path):
             yield c.synthesized_path
+
+# end of runner module
