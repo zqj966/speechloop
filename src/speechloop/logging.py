@@ -4,6 +4,7 @@ speechloop 不强制接管 ``logging``，只提供一个轻量 JSON line 输出�
 用于 CI 环境下把每一条事件写到 stdout 方便机读。
 """
 from __future__ import annotations
+
 import json
 import sys
 from typing import Any
