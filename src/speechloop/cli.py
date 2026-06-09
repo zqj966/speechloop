@@ -1,5 +1,6 @@
 """speechloop 命令行入口。"""
 from __future__ import annotations
+
 import argparse
 import json
 import sys
@@ -108,7 +109,7 @@ def _cmd_init(args) -> int:
 
 def _cmd_report(args) -> int:
     data = json.loads(Path(args.input).read_text(encoding="utf-8"))
-    from .result import SuiteResult, CaseResult, StepRecord
+    from .result import CaseResult, StepRecord, SuiteResult
     sr = SuiteResult(
         suite_name=data.get("suite", ""),
         cases=[
