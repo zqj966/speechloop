@@ -49,7 +49,7 @@ speechloop report result.json --format md         # 把 JSON 转 Markdown
 speechloop init demo/                             # 生成最小套件
 ```
 
-## 4. HTML 报告 (浏览器自包含)
+## 4. HTML 报告
 
 报告包含：
 
@@ -65,9 +65,3 @@ speechloop init demo/                             # 生成最小套件
 ```
 
 阈值未通过 → exit code 1，CI 会自动失败。
-
-<!-- polish 4 -->
-
-<!-- polish 5 -->
-
-<!-- polish 6 -->
