@@ -1,0 +1,12 @@
+suite: latency
+defaults:
+  asr: dummy
+  llm: echo
+  tts: tone
+cases:
+  - name: c1
+    audio: ./hello.wav
+  - name: c2
+    audio: ./hello.wav
+thresholds:
+  latency_p95_ms: 5000
