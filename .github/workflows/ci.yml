@@ -34,7 +34,7 @@ jobs:
       - run: pip install -e .[dev]
       - run: pytest --cov=speechloop --cov-report=xml
       - if: matrix.python-version == '3.11'
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: coverage
           path: coverage.xml
