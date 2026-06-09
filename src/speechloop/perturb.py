@@ -57,3 +57,5 @@ def expand_matrix(specs: Iterable[dict]) -> list[Perturbation]:
 
 def deterministic_rng(seed: int) -> random.Random:
     return random.Random(seed)
+
+# Perturbation IDs land in CaseResult.tags so reports can filter on them.
