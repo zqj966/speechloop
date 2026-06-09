@@ -40,3 +40,5 @@ audio.wav ─▶│  ASR     │─▶  │  LLM     │─▶  │  TTS     │
 # noted
 
 <!-- polish 11 -->
+
+<!-- polish 12 -->
