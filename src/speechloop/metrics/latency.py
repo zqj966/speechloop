@@ -1,6 +1,7 @@
 """延迟分位数。"""
 from __future__ import annotations
-from typing import Iterable
+
+from collections.abc import Iterable
 
 
 def latency_percentiles(values: Iterable[float], ps=(0.5, 0.95, 0.99)) -> dict[str, float]:
