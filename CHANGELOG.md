@@ -32,3 +32,5 @@
 
 ### Added
 - 初始版本：YAML 套件 / Dummy 适配器 / WER+CER / JSON+HTML reporter / CLI
+
+# noted
