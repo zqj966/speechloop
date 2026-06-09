@@ -69,3 +69,5 @@ speechloop init demo/                             # 生成最小套件
 <!-- polish 4 -->
 
 <!-- polish 5 -->
+
+<!-- polish 6 -->
