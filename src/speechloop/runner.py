@@ -1,11 +1,12 @@
 """执行引擎：把一个 ``Suite`` 跑成 ``SuiteResult``。"""
 from __future__ import annotations
+
 import concurrent.futures
 import os
 import tempfile
 import time
+from collections.abc import Iterable
 from pathlib import Path
-from typing import Iterable
 
 from .adapters import get_adapter
 from .audio import read_wav, write_wav
@@ -44,9 +45,9 @@ def _run_one(case: Case, defaults: dict, perturb: Perturbation,
             perturbed_path = artifacts_dir / f"{name}.input.wav"
             write_wav(perturbed_path, audio)
         else:
-            tf = tempfile.NamedTemporaryFile(suffix=".wav", delete=False)
-            tf.close()
-            perturbed_path = Path(tf.name)
+            fd, name = tempfile.mkstemp(suffix=".wav")
+            os.close(fd)
+            perturbed_path = Path(name)
             write_wav(perturbed_path, audio)
     else:
         perturbed_path = Path(case.audio)
