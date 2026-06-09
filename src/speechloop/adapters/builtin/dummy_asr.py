@@ -1,5 +1,6 @@
 """按文件名 → 转写的查表式 ASR，便于在 CI 中跑通整条链路。"""
 from __future__ import annotations
+
 from pathlib import Path
 
 from ..base import register

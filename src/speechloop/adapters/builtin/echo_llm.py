@@ -1,5 +1,6 @@
 """把输入原样返回 —— 用于打通整条链路。"""
 from __future__ import annotations
+
 from ..base import register
 
 
