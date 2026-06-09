@@ -1,5 +1,6 @@
 """JSON reporter —— 同时是 ``speechloop report`` 的输入格式。"""
 from __future__ import annotations
+
 import json
 from dataclasses import asdict
 
