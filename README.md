@@ -5,3 +5,9 @@
 ![CI](https://github.com/zqj966/speechloop/actions/workflows/ci.yml/badge.svg)
 
 用 YAML 描述 ASR→LLM→TTS 链路，跑出可断言的报告。
+
+```bash
+pip install speechloop
+speechloop init demo
+speechloop run demo/suite.yaml --format html -o report.html
+```
