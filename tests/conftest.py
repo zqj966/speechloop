@@ -1,8 +1,9 @@
 """Shared pytest fixtures."""
 from __future__ import annotations
+
 import pytest
 
-from speechloop.audio import sine, silence, write_wav
+from speechloop.audio import silence, sine, write_wav
 
 
 @pytest.fixture

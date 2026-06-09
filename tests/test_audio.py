@@ -1,4 +1,4 @@
-from speechloop.audio import read_wav, write_wav, sine
+from speechloop.audio import read_wav, sine, write_wav
 
 
 def test_wav_round_trip(tmp_path):
