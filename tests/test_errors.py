@@ -1,6 +1,10 @@
 from speechloop.errors import (
-    SpeechloopError, SuiteLoadError, AdapterError, TransientError,
-    CaseTimeoutError, ThresholdNotMet,
+    AdapterError,
+    CaseTimeoutError,
+    SpeechloopError,
+    SuiteLoadError,
+    ThresholdNotMet,
+    TransientError,
 )
 
 

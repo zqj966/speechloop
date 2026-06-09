@@ -1,4 +1,3 @@
-import os
 
 from speechloop.config import Config
 
