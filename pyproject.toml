@@ -34,7 +34,7 @@ dev = [
     "mypy>=1.8",
     "pre-commit>=3",
 ]
-http = ["httpx>=0.27"]
+http = ["httpx>=0.28.1"]
 
 [project.scripts]
 speechloop = "speechloop.cli:main"
