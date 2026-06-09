@@ -32,4 +32,9 @@ jobs:
           python-version: ${{ matrix.python-version }}
           cache: pip
       - run: pip install -e .[dev]
-      - run: pytest
+      - run: pytest --cov=speechloop --cov-report=xml
+      - if: matrix.python-version == '3.11'
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage
+          path: coverage.xml
