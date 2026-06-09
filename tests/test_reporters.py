@@ -1,6 +1,7 @@
 import json
-from speechloop.result import SuiteResult, CaseResult, StepRecord
+
 from speechloop.reporters import render
+from speechloop.result import CaseResult, StepRecord, SuiteResult
 
 
 def _sample():

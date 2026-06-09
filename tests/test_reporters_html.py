@@ -1,5 +1,5 @@
 from speechloop.reporters import render
-from speechloop.result import SuiteResult, CaseResult
+from speechloop.result import CaseResult, SuiteResult
 
 
 def test_html_contains_each_case():
