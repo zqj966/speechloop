@@ -1,4 +1,6 @@
-import subprocess, sys, textwrap
+import subprocess
+import sys
+import textwrap
 
 
 def test_threshold_failure_exits_nonzero(tmp_path):
