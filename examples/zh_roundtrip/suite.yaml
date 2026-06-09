@@ -1,0 +1,13 @@
+suite: zh_roundtrip
+defaults:
+  asr: dummy
+  llm: regex
+  tts: tone
+cases:
+  - name: greet
+    audio: ./你好.wav
+    expected_transcript: "你好"
+    expected_response_contains: ["你好"]
+    tags: [zh]
+thresholds:
+  cer_max: 0.2
