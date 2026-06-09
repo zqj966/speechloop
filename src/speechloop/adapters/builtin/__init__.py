@@ -1,0 +1,1 @@
+"""builtin adapters — stub."""
