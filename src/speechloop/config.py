@@ -1,5 +1,6 @@
 """可选的 TOML 配置加载 + 环境变量覆盖。"""
 from __future__ import annotations
+
 import os
 from dataclasses import dataclass, field
 from pathlib import Path
@@ -18,7 +19,7 @@ class Config:
     extras: dict = field(default_factory=dict)
 
     @classmethod
-    def load(cls, path: str | Path | None = None) -> "Config":
+    def load(cls, path: str | Path | None = None) -> Config:
         data: dict = {}
         if path is not None and Path(path).exists():
             with open(path, "rb") as f:
@@ -33,7 +34,7 @@ class Config:
         )
         return cfg.apply_env()
 
-    def apply_env(self) -> "Config":
+    def apply_env(self) -> Config:
         if "SPEECHLOOP_WORKERS" in os.environ:
             self.workers = int(os.environ["SPEECHLOOP_WORKERS"])
         if "SPEECHLOOP_TIMEOUT" in os.environ:
